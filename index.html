@@ -1,28 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - Loading Animation CSS</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="./style.css">
-<meta http-equiv="refresh" content="5;url=home\home.html" />
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<div class="loading">
-	<div class="loading-text">
-		<span class="loading-text-words">L</span>
-		<span class="loading-text-words">O</span>
-		<span class="loading-text-words">A</span>
-		<span class="loading-text-words">D</span>
-		<span class="loading-text-words">I</span>
-		<span class="loading-text-words">N</span>
-		<span class="loading-text-words">G</span>
-	</div>
-</div>
-<!-- partial -->
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5998492865146153"
-     crossorigin="anonymous"></script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Download Time Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Download Time Calculator</h1>
+    <form>
+      <div class="input-group">
+        <label for="file-size">File Size:</label>
+        <input type="number" id="file-size" name="file-size" required>
+        <select id="file-size-unit" name="file-size-unit">
+          <option value="KB">KB</option>
+          <option value="MB">MB</option>
+          <option value="GB" selected>GB</option>
+          <option value="TB">TB</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="download-speed">Download Speed:</label>
+        <input type="number" id="download-speed" name="download-speed" required>
+        <select id="download-speed-unit" name="download-speed-unit">
+          <option value="kbit">kbit</option>
+          <option value="mbit">mbit</option>
+          <option value="gbit">gbit</option>
+          <option value="KB">KB/s</option>
+          <option value="MB" selected>MB/s</option>
+          <option value="GB">GB/s</option>
+        </select>
+      </div>
+      <button type="button" id="calculate-button">Calculate</button>
+    </form>
+    <div class="result">
+      <h2>Download Time</h2>
+      <div class="input-group">
+        <label for="result-days">Days:</label>
+        <span id="result-days"></span>
+      </div>
+      <div class="input-group">
+        <label for="result-hours">Hours:</label>
+        <span id="result-hours"></span>
+      </div>
+      <div class="input-group">
+        <label for="result-minutes">Minutes:</label>
+        <span id="result-minutes"></span>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
